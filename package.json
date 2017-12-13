@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "An interview test for Front-End Development job candidates",
   "main": "index.js",
-  "repository": "git@github.com:OskHa/frontend_interview_test.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/OskHa/frontend_interview_test.git"
+  },
   "author": "Tejas Kumar <tejas.kumar@mcmakler.de>",
   "license": "MIT",
   "scripts": {
@@ -18,5 +21,14 @@
     "style-loader": "^0.18.2",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
+  },
+  "bugs": {
+    "url": "https://github.com/OskHa/frontend_interview_test/issues"
+  },
+  "homepage": "https://github.com/OskHa/frontend_interview_test#readme",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
   }
 }
