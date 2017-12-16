@@ -3,6 +3,7 @@ const path = require('path');
 const app = express();
 const request = require('request');
 const port = process.env.PORT || 8081;
+const RateLimit = require('express-rate-limit');
 
 app.set('views', path.join(__dirname, 'client/html'));
 app.engine('html', require('ejs').renderFile);
@@ -11,14 +12,13 @@ app.use(express.static(path.join(__dirname, 'assets')));
 app.use(express.static(path.join(__dirname, 'client')));
 
 app.get('/', function(err, resp){
-
-request('https://api.mcmakler.de/v1/advertisements', function(err, resp, body) {
-
-  console.log(JSON.parse(body));
+  resp.render('index.html');
 });
 
-  //resp.render('index.html');
-
+app.get('/getAdvertisment', function (err, resp) {
+  request('https://api.mcmakler.de/v1/advertisements', function(err, res, body) {
+    resp.send(JSON.parse(body).data);
+  });
 });
 
 app.get('/serviceUnavailable', function(err, resp){

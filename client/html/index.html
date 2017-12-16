@@ -5,12 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Advertisement Mcmakler</title>
     <script src="../node_modules/angular/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>
     <link rel="stylesheet" href="/style.css">
   </head>
   <body ng-app="app">
-      <div class="container" ng-controller="MainController as mainCtrl">
+      <div class="container" ng-controller="MainController">
         <div class="advertisements">
-          <div class="displayAd">
+          <div class="displayAd" ng-repeat="ad in ads | limitTo:10">
+
+                <div class="adImageContent">
+                  <img class="adImg" ng-src="{{ad.img}}"/>
+                  <label class="roomType" ng-bind = "ad.type"></label>
+                </div>
+
+                <div class="contentContainer">
+                  <div class="adContent">
+                    <div class="adTitle" ng-bind = "ad.title"></div>
+                    <div class="adAddress" ng-bind = "ad.address"></div>
+                    <div class="adAreaPrice">
+                      <div class="price">{{ad.price}} &euro;</div>
+                      <div class="area-rooms">
+                        <span class="space" ng-bind = "ad.rooms"></span>
+                        <span class="verticalLine"></span>
+                        <span class="area">{{ad.space}} m<sup class="power">2</sup></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
           </div>
         </div>
