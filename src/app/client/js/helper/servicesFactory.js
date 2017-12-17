@@ -9,10 +9,10 @@ app.factory("Services", ["$http", function($http){
   }
 
   var findValue = function(obj, path){
-    var paths = path.split(".");
-    var current = obj;
+    let paths = path.split(".");
+    let current = obj;
 
-    for (var i = 0; i < paths.length; ++i) {
+    for (let i = 0; i < paths.length; ++i) {
       if (current[paths[i]] == undefined || current[paths[i]] == null) {
         return current[paths[i]];
       } else {

@@ -178,6 +178,7 @@ body {
 h1{
   max-width: 100vw;
 }
+
 /* loading spinner */
 .loader {
   border: 16px solid #f3f3f3;
