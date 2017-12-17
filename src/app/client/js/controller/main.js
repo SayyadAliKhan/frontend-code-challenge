@@ -75,6 +75,6 @@ app.controller('MainController', ['$scope','Services', function ($scope, Service
   }
   setInterval(function(){
     getAdvertisment();
-  },300000);
+  },600000);
 
 }]);

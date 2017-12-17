@@ -3,7 +3,6 @@ const path = require('path');
 const app = express();
 const request = require('request');
 const port = process.env.PORT || 8081;
-const RateLimit = require('express-rate-limit');
 
 app.set('views', path.join(__dirname, 'src/app/client/html'));
 app.engine('html', require('ejs').renderFile);
