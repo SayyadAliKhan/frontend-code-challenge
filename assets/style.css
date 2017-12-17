@@ -1,3 +1,5 @@
+/* reset browser setting */
+
 html {
   box-sizing: border-box;
 }
@@ -9,6 +11,8 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* style */
 
 .container {
   margin: 10px;
@@ -47,6 +51,7 @@ body {
   color: silver;
   display: grid;
   font-size: 10px;
+  font-weight: bold;
   position: absolute;
   left: 15px;
   top: 15px;
@@ -58,7 +63,7 @@ body {
 }
 
 .contentContainer {
-  border: 1px solid silver;
+  border: 0.7px solid lightgray;
   border-top: none;
   font-size: 13px;
   padding: 13% 10%;
@@ -106,7 +111,9 @@ body {
 }
 
 .area-rooms {
+  color: dimgrey;
   text-align: right;
+
 }
 
 .power {
@@ -118,7 +125,8 @@ body {
   margin: 0 5%;
 }
 
-@media screen and (max-width:1200px) {
+/* media queries */
+@media screen and (max-width:1250px) {
 
   .advertisements {
     display: grid;
@@ -163,4 +171,21 @@ body {
     margin: 0 auto;
   }
 
+}
+/* media queries end*/
+
+/* loading spinner */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid gray;
+  width: 160px;
+  height: 160px;
+  animation: spin 2s linear infinite;
+  margin: 15% auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

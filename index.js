@@ -5,11 +5,11 @@ const request = require('request');
 const port = process.env.PORT || 8081;
 const RateLimit = require('express-rate-limit');
 
-app.set('views', path.join(__dirname, 'client/html'));
+app.set('views', path.join(__dirname, 'src/app/client/html'));
 app.engine('html', require('ejs').renderFile);
 
 app.use(express.static(path.join(__dirname, 'assets')));
-app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static(path.join(__dirname, 'src/app/client')));
 
 app.get('/', function(err, resp){
   resp.render('index.html');

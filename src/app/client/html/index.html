@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Advertisement Mcmakler</title>
     <script src="../node_modules/angular/angular.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>
     <link rel="stylesheet" href="/style.css">
   </head>
   <body ng-app="app">
       <div class="container" ng-controller="MainController">
-        <div class="advertisements">
+        <div class="loader" ng-show="!adFlag">
+        </div>
+        <div class="advertisements" ng-if="adFlag">
           <div class="displayAd" ng-repeat="ad in ads | limitTo:10">
 
                 <div class="adImageContent">
@@ -36,6 +37,8 @@
           </div>
         </div>
       </div>
-      <script src="../js/main.js"></script>
+      <script src="../js/appModule.js"></script>
+      <script src="../js/controller/main.js"></script>
+      <script src="../js/helper/servicesFactory.js"></script>
   </body>
 </html>
