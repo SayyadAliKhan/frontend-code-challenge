@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-var app = angular.module('app', []);
+var app = angular.module("app", []);
 
-app.controller('MainController', ['$scope','Services', function ($scope, Services) {
+app.controller("MainController", ["$scope","Services", function ($scope, Services) {
 
   getAdvertisment();
 
@@ -14,10 +14,10 @@ app.controller('MainController', ['$scope','Services', function ($scope, Service
           $scope.adFlag = true;
           var counter = true;
           var count = 0;
-          for(var data of response.data){
+          for(let data of response.data){
             count++;
-            var ad = [];
-            var price = 0;
+            let ad = [];
+            let price = 0;
 
             if(Services.findValue(data, "title")){
               ad.title = data.title;
@@ -67,10 +67,10 @@ app.controller('MainController', ['$scope','Services', function ($scope, Service
             }
           }
       }else{
-          window.location.href = '/serviceUnavailable';
+          window.location.href = "/serviceUnavailable";
       }
     }).catch(function(err){
-        window.location.href = '/serviceUnavailable';
+        window.location.href = "/serviceUnavailable";
     });
   }
   setInterval(function(){

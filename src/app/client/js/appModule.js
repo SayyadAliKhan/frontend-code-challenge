@@ -1,1 +1,3 @@
-angular.element(document).ready(function () { angular.bootstrap(document, ['app']); });
+"use strict"
+
+angular.element(document).ready(function () { angular.bootstrap(document, ["app"]); });
