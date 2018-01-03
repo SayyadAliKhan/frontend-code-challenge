@@ -1,32 +1,3 @@
-Technologies used: -
-
-Angularjs - The scopes were very few so less processing time taken by angular watchers. Two way data binding helped to write less code
-in javascript. Also helped in modularizing the code by bootstrapping the application.
-
-Nodejs + Express - For backend service call to api and server.
-
-Html + CSS
-
-Comments:- 
-
-Was unsure of which image needs to be picked, so picked the first image in the api.
-
-Used linters for js and css. Also, neglected some lint errors for code readability.
-
-Media Queries for pixel perfection.
-
-Used MVC pattern, factory for helper and service call.
-
-Used window.location.href instead of route provider, as there was only 1 route incase of service error.
-
-TEST:
-
-Opted not to create test because task was given on 11 Dec, I am still working so got only weekend to work on the task and its been a
-week.
-
-
-
-//Question
 # Front-End Interview Test
 
 This is a simple front-end code challenge created to serve two purposes:
@@ -76,3 +47,26 @@ The programming challenge exists in 2 parts:
 * Usage of linters.
 * Git hooks.
 * Usage of Material Design concepts
+
+Explanation -----------------------------------------------------------------------------------------------------------
+
+Technologies used: -
+
+Angularjs - The scopes were very few so less processing time taken by angular watchers. Two way data binding helped to write less code
+in javascript. Also helped in modularizing the code by bootstrapping the application.
+
+Nodejs + Express - For backend service call to api and server.
+
+Html + CSS
+
+Comments:- 
+
+Was unsure of which image needs to be picked, so picked the first image in the api.
+
+Used linters for js and css. Also, neglected some lint errors for code readability.
+
+Media Queries for pixel perfection.
+
+Used MVC pattern, factory for helper and service call.
+
+Used window.location.href instead of route provider, as there was only 1 route incase of service error.
